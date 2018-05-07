@@ -59,7 +59,7 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/categories/笔记">笔记</a></li>
+				<li><a href="/categories/笔记/">笔记</a></li>
 	        
 			</ul>
 		</nav>
@@ -131,7 +131,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/笔记">笔记</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories/笔记/">笔记</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,35 +146,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <!-- 目录内容 -->
-
-<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-</p>
-<div id="toc-article" class="toc-article">
-    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、新建一个vue-cli项目文件"><span class="toc-number">1.</span> <span class="toc-text">一、新建一个vue-cli项目文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装vue脚手架输入："><span class="toc-number">1.0.1.</span> <span class="toc-text">1、安装vue脚手架输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装依赖输入："><span class="toc-number">1.0.2.</span> <span class="toc-text">2、安装依赖输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、启动项目输入："><span class="toc-number">1.0.3.</span> <span class="toc-text">3、启动项目输入：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、页面间传值"><span class="toc-number">2.</span> <span class="toc-text">二、页面间传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跳转并传值："><span class="toc-number">2.0.1.</span> <span class="toc-text">跳转并传值：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接收值："><span class="toc-number">2.0.2.</span> <span class="toc-text">接收值：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、父组件往子组件传值"><span class="toc-number">3.</span> <span class="toc-text">三、父组件往子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件："><span class="toc-number">3.0.1.</span> <span class="toc-text">父组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件："><span class="toc-number">3.0.2.</span> <span class="toc-text">子组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、父组件往子组件传值"><span class="toc-number">4.</span> <span class="toc-text">四、父组件往子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件：-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">子组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件：-1"><span class="toc-number">4.0.2.</span> <span class="toc-text">父组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、路由"><span class="toc-number">5.</span> <span class="toc-text">五、路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、动态路由"><span class="toc-number">5.1.</span> <span class="toc-text">一、动态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、嵌套路由"><span class="toc-number">5.2.</span> <span class="toc-text">二、嵌套路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#路由设置"><span class="toc-number">5.2.1.</span> <span class="toc-text">路由设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GoodsList-vue页面设置"><span class="toc-number">5.2.2.</span> <span class="toc-text">GoodsList.vue页面设置</span></a></li></ol></li></ol></li></ol>
-</div>
-<script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-    };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-    };
-</script>
-
-<!-- 目录内容结束 -->
-
-<article id="postt-vue笔记" class="article article-type-postt " itemscope itemprop="blogPost">
+            <article id="postt-vue笔记" class="article article-type-postt " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -310,8 +282,6 @@
   
 
   
-
-
 
 
           </div>
