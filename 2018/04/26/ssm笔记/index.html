@@ -9,13 +9,14 @@
   <title>ssm 笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssm 笔记">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/ssm笔记/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-26T15:50:29.865Z">
+<meta property="og:updated_time" content="2018-07-16T08:17:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssm 笔记">
 <meta name="twitter:description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
@@ -59,7 +60,7 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/categories/笔记/">笔记</a></li>
+				<li><a href="/tags/笔记/">笔记</a></li>
 	        
 			</ul>
 		</nav>
@@ -131,7 +132,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/笔记/">笔记</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/笔记/">笔记</a></li>
 		        
 				</ul>
 			</nav>
@@ -168,8 +169,7 @@
       
         <h2 id="一、SpringMVC接口解释"><a href="#一、SpringMVC接口解释" class="headerlink" title="一、SpringMVC接口解释"></a>一、SpringMVC接口解释</h2><h4 id="（1）DispatcherServlet接口："><a href="#（1）DispatcherServlet接口：" class="headerlink" title="（1）DispatcherServlet接口："></a>（1）DispatcherServlet接口：</h4><p>Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的HandlerMapping定位到具体的Controller。 </p>
 <p>是整个Spring MVC的核心。它负责接收HTTP请求组织协调Spring MVC的各个组成部分。其主要工作有以下三项：<br>（1）截获符合特定格式的URL请求。<br>（2）初始化DispatcherServlet上下文对应WebApplicationContext，并将其与业务层、持久化层的WebApplicationContext建立关联。<br>（3）初始化Spring MVC的各个组成组件，并装配到DispatcherServlet中。</p>
-<h4 id="（2）HandlerMapping接口："><a href="#（2）HandlerMapping接口：" class="headerlink" title="（2）HandlerMapping接口："></a><strong>（2）HandlerMapping接口</strong>：</h4><a id="more"></a>
-<p>能够完成客户请求到Controller映射。 </p>
+<h4 id="（2）HandlerMapping接口："><a href="#（2）HandlerMapping接口：" class="headerlink" title="（2）HandlerMapping接口："></a><strong>（2）HandlerMapping接口</strong>：</h4><p>能够完成客户请求到Controller映射。 </p>
 <h4 id="（3）Controller接口："><a href="#（3）Controller接口：" class="headerlink" title="（3）Controller接口："></a>（3）Controller接口：</h4><p>需要为并发用户处理上述请求，因此实现Controller接口时，必须保证线程安全并且可重用。<br>Controller将处理用户请求，这和Struts Action扮演的角色是一致的。一旦Controller处理完用户请求，则返回ModelAndView对象给DispatcherServlet前端控制器，ModelAndView中包含了模型（Model）和视图（View）。<br>从宏观角度考虑，DispatcherServlet是整个Web应用的控制器；从微观考虑，Controller是单个Http请求处理过程中的控制器，而ModelAndView是Http请求过程中返回的模型（Model）和视图（View）。 </p>
 <h4 id="（4）ViewResolver接口："><a href="#（4）ViewResolver接口：" class="headerlink" title="（4）ViewResolver接口："></a><strong>（4）ViewResolver接口</strong>：</h4><p>Spring提供的视图解析器（ViewResolver）在Web应用中查找View对象，从而将相应结果渲染给客户。</p>
 <h2 id="二、xml文件各种标签属性"><a href="#二、xml文件各种标签属性" class="headerlink" title="二、xml文件各种标签属性"></a>二、xml文件各种标签属性</h2><h4 id="（1）"><a href="#（1）" class="headerlink" title="（1）"></a>（1）<bean></bean></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.我们只需在Spring容器能加载到的地方配置bean就可以把自定义类加入到Spring容器中，注意：我们配置的bean是实现类，而不是接口！！ </span><br><span class="line">2.我们可以直接在我们的impl类中配置@service，把相应的类注入到spring容器中。</span><br><span class="line">切记这两种方式都可以注入</span><br><span class="line">说明：在配置文件中配置bean，其实就是在Spring容器中注入类，这个类在Spring容器中有唯一一个表示id,我们可以通过Spring容器去管理这个类，非常方便（类似ios中的ARC自动释放池）；</span><br></pre></td></tr></table></figure>
@@ -247,6 +247,11 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
 <p>&lt;mvc:resources location=”/“ mapping=”/*<em>/</em>.html”/&gt;</p>
 </li>
 </ol>
+<h2 id="五、ssm前后端分离"><a href="#五、ssm前后端分离" class="headerlink" title="五、ssm前后端分离"></a>五、ssm前后端分离</h2><p>注意：要导入json相应的包！</p>
+<p>控制器前面用@RestController就不用在方法上面加@responsebody。</p>
+<p>控制器前面用@Controller，就要在方法前面加上@responsebody</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//返回json数据(测试)</span><br><span class="line">	@RequestMapping(&quot;/selectEmployee.do&quot;)</span><br><span class="line">	public List&lt;Employee&gt; selectEmployee(Employee employee)&#123;</span><br><span class="line">//		List&lt;Employee&gt; employees = new ArrayList&lt;Employee&gt;();</span><br><span class="line">//		for (int i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">//			Employee employee = new Employee();</span><br><span class="line">//			employee.setId(5+i);</span><br><span class="line">//			employee.setName(&quot;张&quot;+i);;</span><br><span class="line">//			employees.add(employee);</span><br><span class="line">//		&#125;</span><br><span class="line">//		return employees;</span><br><span class="line">		</span><br><span class="line">		List&lt;Employee&gt; employeesList = employeeService.getEmployees(employee);</span><br><span class="line">		return employeesList;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>访问的时候：地址/项目名/selectEmployee.do（<a href="http://localhost:8080/jxc/selectEmployee.do）" target="_blank" rel="noopener">http://localhost:8080/jxc/selectEmployee.do）</a></p>
 
       
 
@@ -255,18 +260,18 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
 
@@ -279,20 +284,15 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
   
 <nav id="article-nav">
   
-    <a href="/2018/04/26/hexo博客笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/26/vue笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo 博客笔记
+          vue 笔记
         
       </div>
     </a>
   
-  
-    <a href="/2018/04/26/vue笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue 笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -333,7 +333,7 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 刘宗信
+    		&copy; 2019 刘宗信
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme Yilia
@@ -413,7 +413,15 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
             
             <div class="clearfix"></div>
@@ -465,27 +473,27 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://cn.vuejs.org/v2/guide/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>vue官网</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://www.imooc.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>慕课网</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.zhihu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.csdn.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>廖雪峰的官方网站</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://music.163.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>网易云官网</a>
             </li>
           
         </ul>

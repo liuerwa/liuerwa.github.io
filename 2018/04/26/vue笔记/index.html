@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>vue 笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev">
+  <meta name="description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev 二、页面间传值this.$router.replace(‘/index’)也可以">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue 笔记">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/vue笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev">
+<meta property="og:description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev 二、页面间传值this.$router.replace(‘/index’)也可以">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-26T16:26:03.952Z">
+<meta property="og:updated_time" content="2018-07-16T08:19:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 笔记">
-<meta name="twitter:description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev">
+<meta name="twitter:description" content="一、新建一个vue-cli项目文件1、安装vue脚手架输入：​    vue init webpack exprice  注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文” 2、安装依赖输入：​    npm install 3、启动项目输入：​    npm run dev 二、页面间传值this.$router.replace(‘/index’)也可以">
   
   
     <link rel="icon" href="/favicon.png">
@@ -59,7 +60,7 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/categories/笔记/">笔记</a></li>
+				<li><a href="/tags/笔记/">笔记</a></li>
 	        
 			</ul>
 		</nav>
@@ -131,7 +132,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/笔记/">笔记</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/笔记/">笔记</a></li>
 		        
 				</ul>
 			</nav>
@@ -170,7 +171,6 @@
 <p>注意这里的“exprice” 是项目的名称可以说是随便的起名，但是需要主要的是“不能用中文”</p>
 <h4 id="2、安装依赖输入："><a href="#2、安装依赖输入：" class="headerlink" title="2、安装依赖输入："></a>2、安装依赖输入：</h4><p>​    npm install</p>
 <h4 id="3、启动项目输入："><a href="#3、启动项目输入：" class="headerlink" title="3、启动项目输入："></a>3、启动项目输入：</h4><p>​    npm run dev</p>
-<a id="more"></a>
 <h2 id="二、页面间传值"><a href="#二、页面间传值" class="headerlink" title="二、页面间传值"></a>二、页面间传值</h2><p>this.$router.replace(‘/index’)也可以跳转页面</p>
 <h4 id="跳转并传值："><a href="#跳转并传值：" class="headerlink" title="跳转并传值："></a>跳转并传值：</h4><p>​    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;  </span><br><span class="line"></span><br><span class="line">​		login () &#123;   </span><br><span class="line"></span><br><span class="line"> 			this.$router.push(&#123;name: &apos;index&apos;,params: &#123;username: this.username,password: 				   	this.password&#125;&#125;); </span><br><span class="line"></span><br><span class="line"> 		&#125;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
@@ -182,7 +182,7 @@
 <h4 id="子组件："><a href="#子组件：" class="headerlink" title="子组件："></a>子组件：</h4><p>​    props: [‘msgfromfather’]  //和定义方法、变量一样需要定义</p>
 <p>​    console.log(this.msgfromfather)   //可以在方法里面打印出传过来的值</p>
 <p>​      //可以在页面直接显示</p>
-<h2 id="四、父组件往子组件传值"><a href="#四、父组件往子组件传值" class="headerlink" title="四、父组件往子组件传值"></a>四、父组件往子组件传值</h2><p>子组件可以使用 $emit 触发父组件的自定义事件。</p>
+<h2 id="四、子组件往父组件传值"><a href="#四、子组件往父组件传值" class="headerlink" title="四、子组件往父组件传值"></a>四、子组件往父组件传值</h2><p>子组件可以使用 $emit 触发父组件的自定义事件。</p>
 <h4 id="子组件：-1"><a href="#子组件：-1" class="headerlink" title="子组件："></a>子组件：</h4><p>​    this.$emit(“child-speak”,this.msg);  //写在方法里面，比如点击之后就执行这个方法，child-speak是父组件自定义的事件</p>
 <h4 id="父组件：-1"><a href="#父组件：-1" class="headerlink" title="父组件："></a>父组件：</h4><p>​    <component-a msgfromfather="you are my son!" @child-speak="getchildspeak"></component-a></p>
 <p>//child-speak是自定义的事件，getchildspeak是方法</p>
@@ -190,13 +190,30 @@
 <p>//通过这个方法就可以得到传过来的msg代表什么值</p>
 <p>​      </p>
 <p>//显示出来接收到的值</p>
-<h2 id="五、路由"><a href="#五、路由" class="headerlink" title="五、路由"></a>五、路由</h2><h3 id="一、动态路由"><a href="#一、动态路由" class="headerlink" title="一、动态路由"></a>一、动态路由</h3><p>​    path: ‘/goods/:goodsId/user/:name’ 或者 path: ‘/goods/:goodsId</p>
+<h2 id="五、路由"><a href="#五、路由" class="headerlink" title="五、路由"></a>五、路由</h2><h3 id="1、动态路由"><a href="#1、动态路由" class="headerlink" title="1、动态路由"></a>1、动态路由</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &apos;/goods/:goodsId/user/:name&apos;,</span><br><span class="line">      name: &apos;GoodsList&apos;,</span><br><span class="line">      component: GoodsList</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>浏览器地址栏：<a href="http://localhost:8081/#/goods/111/user/admin" target="_blank" rel="noopener">http://localhost:8081/#/goods/111/user/admin</a></p>
+<p>path: ‘/goods/:goodsId/user/:name’ 或者 path: ‘/goods/:goodsId</p>
 <p>这是配置路由，: 后面是要携带的参数</p>
 <p>​    $route.params.goodsId                           </p>
 <p>​    或者 $ route.params.name</p>
 <p>这是在跳转后获取携带的参数值</p>
-<h3 id="二、嵌套路由"><a href="#二、嵌套路由" class="headerlink" title="二、嵌套路由"></a>二、嵌套路由</h3><h4 id="路由设置"><a href="#路由设置" class="headerlink" title="路由设置"></a>路由设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &apos;/goods&apos;,</span><br><span class="line">      name: &apos;GoodsList&apos;,</span><br><span class="line">      component: GoodsList,</span><br><span class="line">      children: [</span><br><span class="line">        &#123;</span><br><span class="line">          path: &apos;title&apos;,</span><br><span class="line">          name: &apos;title&apos;,</span><br><span class="line">          component: Title</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path: &apos;image&apos;,</span><br><span class="line">          name: &apos;image&apos;,</span><br><span class="line">          component: Image</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="2、嵌套路由"><a href="#2、嵌套路由" class="headerlink" title="2、嵌套路由"></a>2、嵌套路由</h3><h4 id="路由设置"><a href="#路由设置" class="headerlink" title="路由设置"></a>路由设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &apos;/goods&apos;,</span><br><span class="line">      name: &apos;GoodsList&apos;,</span><br><span class="line">      component: GoodsList,</span><br><span class="line">      children: [</span><br><span class="line">        &#123;</span><br><span class="line">          path: &apos;title&apos;,</span><br><span class="line">          name: &apos;title&apos;,</span><br><span class="line">          component: Title</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          path: &apos;image&apos;,</span><br><span class="line">          name: &apos;image&apos;,</span><br><span class="line">          component: Image</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h4 id="GoodsList-vue页面设置"><a href="#GoodsList-vue页面设置" class="headerlink" title="GoodsList.vue页面设置"></a>GoodsList.vue页面设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  这是商品列表页面&lt;br/&gt;</span><br><span class="line">  &lt;router-link to=&quot;/goods/title&quot;&gt;显示商品标题&lt;/router-link&gt;</span><br><span class="line">  &lt;router-link to=&quot;/goods/image&quot;&gt;显示商品图片&lt;/router-link&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3、编程式路由"><a href="#3、编程式路由" class="headerlink" title="3、编程式路由"></a>3、编程式路由</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;jump&quot;&gt;跳转到购物车页面&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">  name: &quot;goods-list&quot;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">      jump() &#123;</span><br><span class="line">        // this.$router.push(&quot;/cart&quot;)</span><br><span class="line">        this.$router.push(&#123;path: &apos;/cart?goodsId=123&apos;&#125;)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4、命名路由"><a href="#4、命名路由" class="headerlink" title="4、命名路由"></a>4、命名路由</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link v-bind:to=&quot;&#123;name:&apos;cart&apos;,params:&#123;cartId:123&#125;&#125;&quot;&gt;跳转到购物车页面--命名路由&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<p>注意：to前面要用v-bind，不然没效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   path: &apos;/cart/:cartId&apos;,</span><br><span class="line">   name: &apos;cart&apos;,</span><br><span class="line">   component: Cart,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="六、浏览器顶部地址栏"><a href="#六、浏览器顶部地址栏" class="headerlink" title="六、浏览器顶部地址栏"></a>六、浏览器顶部地址栏</h2><p>默认：<a href="http://localhost:8081/#/goods" target="_blank" rel="noopener">http://localhost:8081/#/goods</a>         有一个”/#“           mode:’hash’,这句是隐藏默认的</p>
+<p>修改后：index.js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  mode:&apos;history&apos;,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: &apos;/goods&apos;,</span><br><span class="line">      name: &apos;GoodsList&apos;,</span><br><span class="line">      component: GoodsList</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>在index.js里面添加mode:’history’,然后浏览器地址就不用“/#”，<a href="http://localhost:8081/goods" target="_blank" rel="noopener">http://localhost:8081/goods</a></p>
+<h2 id="七、-route-query-xxx和-route-params-xxx"><a href="#七、-route-query-xxx和-route-params-xxx" class="headerlink" title="七、$route.query.xxx和$route.params.xxx"></a>七、$route.query.xxx和$route.params.xxx</h2><p>$route.query.xxx是获取通过this.$router.push({path: ‘/cart?goodsId=123’})这种方式传递的值</p>
+<p>$route.params.xxx是获取组件与组件切换传递的值</p>
+<h2 id="八、mounted、methods、computed"><a href="#八、mounted、methods、computed" class="headerlink" title="八、mounted、methods、computed"></a>八、mounted、methods、computed</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mounted: function() &#123;</span><br><span class="line">		this.run();</span><br><span class="line">	&#125;,</span><br><span class="line">	methods: &#123;</span><br><span class="line">		run() &#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    reversedMessage: function () &#123;</span><br><span class="line">      return this.msg.split(&apos;&apos;).reverse().join(&apos;&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>mounted：进入页面自动会执行的</p>
+<p>methods：比如点击事件需要执行的函数</p>
+<p>computed：计算属性，当绑定的值改变时就会执行</p>
 
       
 
@@ -205,18 +222,18 @@
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/笔记//" class="article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
 
@@ -229,15 +246,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/26/ssm笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/26/hexo博客笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          ssm 笔记
+          hexo 博客笔记
         
       </div>
     </a>
   
+  
+    <a href="/2018/04/26/ssm笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ssm 笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -262,7 +284,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、新建一个vue-cli项目文件"><span class="toc-number">1.</span> <span class="toc-text">一、新建一个vue-cli项目文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装vue脚手架输入："><span class="toc-number">1.0.1.</span> <span class="toc-text">1、安装vue脚手架输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装依赖输入："><span class="toc-number">1.0.2.</span> <span class="toc-text">2、安装依赖输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、启动项目输入："><span class="toc-number">1.0.3.</span> <span class="toc-text">3、启动项目输入：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、页面间传值"><span class="toc-number">2.</span> <span class="toc-text">二、页面间传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跳转并传值："><span class="toc-number">2.0.1.</span> <span class="toc-text">跳转并传值：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接收值："><span class="toc-number">2.0.2.</span> <span class="toc-text">接收值：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、父组件往子组件传值"><span class="toc-number">3.</span> <span class="toc-text">三、父组件往子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件："><span class="toc-number">3.0.1.</span> <span class="toc-text">父组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件："><span class="toc-number">3.0.2.</span> <span class="toc-text">子组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、父组件往子组件传值"><span class="toc-number">4.</span> <span class="toc-text">四、父组件往子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件：-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">子组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件：-1"><span class="toc-number">4.0.2.</span> <span class="toc-text">父组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、路由"><span class="toc-number">5.</span> <span class="toc-text">五、路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、动态路由"><span class="toc-number">5.1.</span> <span class="toc-text">一、动态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、嵌套路由"><span class="toc-number">5.2.</span> <span class="toc-text">二、嵌套路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#路由设置"><span class="toc-number">5.2.1.</span> <span class="toc-text">路由设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GoodsList-vue页面设置"><span class="toc-number">5.2.2.</span> <span class="toc-text">GoodsList.vue页面设置</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、新建一个vue-cli项目文件"><span class="toc-number">1.</span> <span class="toc-text">一、新建一个vue-cli项目文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装vue脚手架输入："><span class="toc-number">1.0.1.</span> <span class="toc-text">1、安装vue脚手架输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装依赖输入："><span class="toc-number">1.0.2.</span> <span class="toc-text">2、安装依赖输入：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、启动项目输入："><span class="toc-number">1.0.3.</span> <span class="toc-text">3、启动项目输入：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、页面间传值"><span class="toc-number">2.</span> <span class="toc-text">二、页面间传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跳转并传值："><span class="toc-number">2.0.1.</span> <span class="toc-text">跳转并传值：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接收值："><span class="toc-number">2.0.2.</span> <span class="toc-text">接收值：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、父组件往子组件传值"><span class="toc-number">3.</span> <span class="toc-text">三、父组件往子组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件："><span class="toc-number">3.0.1.</span> <span class="toc-text">父组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件："><span class="toc-number">3.0.2.</span> <span class="toc-text">子组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、子组件往父组件传值"><span class="toc-number">4.</span> <span class="toc-text">四、子组件往父组件传值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件：-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">子组件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#父组件：-1"><span class="toc-number">4.0.2.</span> <span class="toc-text">父组件：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、路由"><span class="toc-number">5.</span> <span class="toc-text">五、路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、动态路由"><span class="toc-number">5.1.</span> <span class="toc-text">1、动态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、嵌套路由"><span class="toc-number">5.2.</span> <span class="toc-text">2、嵌套路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#路由设置"><span class="toc-number">5.2.1.</span> <span class="toc-text">路由设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GoodsList-vue页面设置"><span class="toc-number">5.2.2.</span> <span class="toc-text">GoodsList.vue页面设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、编程式路由"><span class="toc-number">5.3.</span> <span class="toc-text">3、编程式路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、命名路由"><span class="toc-number">5.4.</span> <span class="toc-text">4、命名路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、浏览器顶部地址栏"><span class="toc-number">6.</span> <span class="toc-text">六、浏览器顶部地址栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、-route-query-xxx和-route-params-xxx"><span class="toc-number">7.</span> <span class="toc-text">七、$route.query.xxx和$route.params.xxx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、mounted、methods、computed"><span class="toc-number">8.</span> <span class="toc-text">八、mounted、methods、computed</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -291,7 +313,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 刘宗信
+    		&copy; 2019 刘宗信
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme Yilia
@@ -371,7 +393,15 @@
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
             
             <div class="clearfix"></div>
@@ -423,27 +453,27 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://cn.vuejs.org/v2/guide/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>vue官网</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://www.imooc.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>慕课网</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.zhihu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>知乎</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.csdn.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>廖雪峰的官方网站</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://music.163.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>网易云官网</a>
             </li>
           
         </ul>
