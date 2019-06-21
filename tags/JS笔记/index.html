@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ssm 笔记 | Hexo</title>
+  <title>Tag: JS笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
-<meta name="keywords" content="笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ssm 笔记">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/ssm笔记/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/JS笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-16T08:17:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ssm 笔记">
-<meta name="twitter:description" content="一、SpringMVC接口解释（1）DispatcherServlet接口：Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的Handl">
+<meta name="twitter:title" content="Hexo">
   
   
     <link rel="icon" href="/favicon.png">
@@ -147,188 +142,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="postt-ssm笔记" class="article article-type-postt " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ssm 笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-postt">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/06/21/JS闭包，作用域，this/" class="archive-article-date">
+  	<time datetime="2019-06-21T07:11:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-21</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/21/JS闭包，作用域，this/">JS闭包，作用域，this</a>
     </h1>
   
 
-        
-        <a href="/2018/04/26/ssm笔记/" class="archive-article-date">
-  	<time datetime="2018-04-26T02:04:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、SpringMVC接口解释"><a href="#一、SpringMVC接口解释" class="headerlink" title="一、SpringMVC接口解释"></a>一、SpringMVC接口解释</h2><h4 id="（1）DispatcherServlet接口："><a href="#（1）DispatcherServlet接口：" class="headerlink" title="（1）DispatcherServlet接口："></a>（1）DispatcherServlet接口：</h4><p>Spring提供的前端控制器，所有的请求都有经过它来统一分发。在DispatcherServlet将请求分发给                                                                    Spring Controller之前，需要借助于Spring提供的HandlerMapping定位到具体的Controller。 </p>
-<p>是整个Spring MVC的核心。它负责接收HTTP请求组织协调Spring MVC的各个组成部分。其主要工作有以下三项：<br>（1）截获符合特定格式的URL请求。<br>（2）初始化DispatcherServlet上下文对应WebApplicationContext，并将其与业务层、持久化层的WebApplicationContext建立关联。<br>（3）初始化Spring MVC的各个组成组件，并装配到DispatcherServlet中。</p>
-<h4 id="（2）HandlerMapping接口："><a href="#（2）HandlerMapping接口：" class="headerlink" title="（2）HandlerMapping接口："></a><strong>（2）HandlerMapping接口</strong>：</h4><p>能够完成客户请求到Controller映射。 </p>
-<h4 id="（3）Controller接口："><a href="#（3）Controller接口：" class="headerlink" title="（3）Controller接口："></a>（3）Controller接口：</h4><p>需要为并发用户处理上述请求，因此实现Controller接口时，必须保证线程安全并且可重用。<br>Controller将处理用户请求，这和Struts Action扮演的角色是一致的。一旦Controller处理完用户请求，则返回ModelAndView对象给DispatcherServlet前端控制器，ModelAndView中包含了模型（Model）和视图（View）。<br>从宏观角度考虑，DispatcherServlet是整个Web应用的控制器；从微观考虑，Controller是单个Http请求处理过程中的控制器，而ModelAndView是Http请求过程中返回的模型（Model）和视图（View）。 </p>
-<h4 id="（4）ViewResolver接口："><a href="#（4）ViewResolver接口：" class="headerlink" title="（4）ViewResolver接口："></a><strong>（4）ViewResolver接口</strong>：</h4><p>Spring提供的视图解析器（ViewResolver）在Web应用中查找View对象，从而将相应结果渲染给客户。</p>
-<h2 id="二、xml文件各种标签属性"><a href="#二、xml文件各种标签属性" class="headerlink" title="二、xml文件各种标签属性"></a>二、xml文件各种标签属性</h2><h4 id="（1）"><a href="#（1）" class="headerlink" title="（1）"></a>（1）<bean></bean></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.我们只需在Spring容器能加载到的地方配置bean就可以把自定义类加入到Spring容器中，注意：我们配置的bean是实现类，而不是接口！！ </span><br><span class="line">2.我们可以直接在我们的impl类中配置@service，把相应的类注入到spring容器中。</span><br><span class="line">切记这两种方式都可以注入</span><br><span class="line">说明：在配置文件中配置bean，其实就是在Spring容器中注入类，这个类在Spring容器中有唯一一个表示id,我们可以通过Spring容器去管理这个类，非常方便（类似ios中的ARC自动释放池）；</span><br></pre></td></tr></table></figure>
-<h2 id="三、springmvc常用注解标签"><a href="#三、springmvc常用注解标签" class="headerlink" title="三、springmvc常用注解标签"></a>三、springmvc常用注解标签</h2><h4 id="（1）-Controller"><a href="#（1）-Controller" class="headerlink" title="（1）@Controller"></a>（1）@Controller</h4><p>​    在SpringMVC 中，控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。在SpringMVC 中提供了一个非常简便的定义Controller 的方法，你无需继承特定的类或实现特定的接口，只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。此外Controller 不会直接依赖于HttpServletRequest 和HttpServletResponse 等HttpServlet 对象，它们可以通过Controller 的方法参数灵活的获取到。</p>
-<p>​    @Controller 用于标记在一个类上，使用它标记的类就是一个SpringMVC Controller 对象。分发处理器将会扫描使用了该注解的类的方法，并检测该方法是否使用了@RequestMapping 注解。@Controller 只是定义了一个控制器类，而使用@RequestMapping 注解的方法才是真正处理请求的处理器。单单使用@Controller 标记在一个类上还不能真正意义上的说它就是SpringMVC 的一个控制器类，因为这个时候Spring 还不认识它。那么要如何做Spring 才能认识它呢？这个时候就需要我们把这个控制器类交给Spring 来管理。有两种方式：</p>
-<p>　　（1）在SpringMVC 的配置文件中定义MyController 的bean 对象。</p>
-<p>​        <bean class="com.host.app.web.controller.MyController"></bean></p>
-<p>　　（2）在SpringMVC 的配置文件中告诉Spring 该到哪里去找标记为@Controller 的Controller 控制器。</p>
-<p>​        &lt; context:component-scan base-package = “com.host.app.web” /&gt;//路径写到controller的上一层</p>
-<h4 id="（2）-RequestMapping"><a href="#（2）-RequestMapping" class="headerlink" title="（2）@RequestMapping"></a>（2）@RequestMapping</h4><p>​    RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。</p>
-<p>RequestMapping注解有六个属性，下面我们把她分成三类进行说明（下面有相应示例）。</p>
-<p><strong>1、 value， method；</strong></p>
-<p>value：     指定请求的实际地址，指定的地址可以是URI Template 模式（后面将会说明）；</p>
-<p>method：  指定请求的method类型， GET、POST、PUT、DELETE等；</p>
-<p><strong>2、consumes，produces</strong></p>
-<p>consumes： 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html;</p>
-<p>produces:    指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；</p>
-<p><strong>3、params，headers</strong></p>
-<p>params： 指定request中必须包含某些参数值是，才让该方法处理。</p>
-<p>headers： 指定request中必须包含某些指定的header值，才能让该方法处理请求。</p>
-<h4 id="（3）-Resource和-Autowired"><a href="#（3）-Resource和-Autowired" class="headerlink" title="（3）@Resource和@Autowired"></a>（3）@Resource和@Autowired</h4><p>​    @Resource和@Autowired都是做bean的注入时使用，其实@Resource并不是Spring的注解，它的包是javax.annotation.Resource，需要导入，但是Spring支持该注解的注入。</p>
-<p><strong>1、共同点</strong></p>
-<p>两者都可以写在字段和setter方法上。两者如果都写在字段上，那么就不需要再写setter方法。</p>
-<p><strong>2、不同点</strong></p>
-<p>@Autowired为Spring提供的注解，需要导入包org.springframework.beans.factory.annotation.Autowired;只按照byType注入。@Autowired注解是按照类型（byType）装配依赖对象，默认情况下它要求依赖对象必须存在，如果允许null值，可以设置它的required属性为false。如果我们想使用按照名称（byName）来装配，可以结合@Qualifier注解一起使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestServiceImpl &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    @Qualifier(&quot;userDao&quot;)</span><br><span class="line">    private UserDao userDao; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>@Resource默认按照ByName自动注入，由J2EE提供，需要导入包javax.annotation.Resource。@Resource有两个重要的属性：name和type，而Spring将@Resource注解的name属性解析为bean的名字，而type属性则解析为bean的类型。所以，如果使用name属性，则使用byName的自动注入策略，而使用type属性时则使用byType自动注入策略。如果既不制定name也不制定type属性，这时将通过反射机制使用byName自动注入策略。</p>
-<p>public class TestServiceImpl {</p>
-<pre><code>// 下面两种@Resource只要使用一种即可
-@Resource(name=&quot;userDao&quot;)
-private UserDao userDao; // 用于字段上
-
-@Resource(name=&quot;userDao&quot;)
-public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
-    this.userDao = userDao;
-}
-</code></pre><p>}</p>
-<p>注：最好是将@Resource放在setter方法上，因为这样更符合面向对象的思想，通过set、get去操作属性，而不是直接去操作属性。</p>
-<p>@Resource装配顺序：</p>
-<p>①如果同时指定了name和type，则从Spring上下文中找到唯一匹配的bean进行装配，找不到则抛出异常。</p>
-<p>②如果指定了name，则从上下文中查找名称（id）匹配的bean进行装配，找不到则抛出异常。</p>
-<p>③如果指定了type，则从上下文中找到类似匹配的唯一bean进行装配，找不到或是找到多个，都会抛出异常。</p>
-<p>④如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一个原始类型进行匹配，如果匹配则自动装配。</p>
-<p>@Resource的作用相当于@Autowired，只不过@Autowired按照byType自动注入。</p>
-<h4 id="（4）、-ModelAttribute和-SessionAttributes"><a href="#（4）、-ModelAttribute和-SessionAttributes" class="headerlink" title="（4）、@ModelAttribute和 @SessionAttributes"></a>（4）、@ModelAttribute和 @SessionAttributes</h4><p>​    代表的是：该Controller的所有方法在调用前，先执行此@ModelAttribute方法，可用于注解和方法参数中，可以把这个@ModelAttribute特性，应用在BaseController当中，所有的Controller继承BaseController，即可实现在调用Controller时，先执行@ModelAttribute方法。</p>
-<p> @SessionAttributes即将值放到session作用域中，写在class上面。</p>
-<p>使用 @ModelAttribute 和 @SessionAttributes 传递和保存数据</p>
-<h4 id="（5）、-PathVariable"><a href="#（5）、-PathVariable" class="headerlink" title="（5）、@PathVariable"></a>（5）、@PathVariable</h4><p>用于将请求URL中的模板变量映射到功能处理方法的参数上，即取出uri模板中的变量作为参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@Controller  </span><br><span class="line">public class TestController &#123;  </span><br><span class="line">     @RequestMapping(value=&quot;/user/&#123;userId&#125;/roles/&#123;roleId&#125;&quot;,method = RequestMethod.GET)  </span><br><span class="line">     public String getLogin(@PathVariable(&quot;userId&quot;) String userId,  </span><br><span class="line">         @PathVariable(&quot;roleId&quot;) String roleId)&#123;  </span><br><span class="line">         System.out.println(&quot;User Id : &quot; + userId);  </span><br><span class="line">         System.out.println(&quot;Role Id : &quot; + roleId);  </span><br><span class="line">         return &quot;hello&quot;;  </span><br><span class="line">     &#125;  </span><br><span class="line">     @RequestMapping(value=&quot;/product/&#123;productId&#125;&quot;,method = RequestMethod.GET)  </span><br><span class="line">     public String getProduct(@PathVariable(&quot;productId&quot;) String productId)&#123;  </span><br><span class="line">           System.out.println(&quot;Product Id : &quot; + productId);  </span><br><span class="line">           return &quot;hello&quot;;  </span><br><span class="line">     &#125;  </span><br><span class="line">     @RequestMapping(value=&quot;/javabeat/&#123;regexp1:[a-z-]+&#125;&quot;,  </span><br><span class="line">           method = RequestMethod.GET)  </span><br><span class="line">     public String getRegExp(@PathVariable(&quot;regexp1&quot;) String regexp1)&#123;  </span><br><span class="line">           System.out.println(&quot;URI Part 1 : &quot; + regexp1);  </span><br><span class="line">           return &quot;hello&quot;;  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="（6）、-requestParam"><a href="#（6）、-requestParam" class="headerlink" title="（6）、@requestParam"></a>（6）、@requestParam</h4><p>@requestParam主要用于在SpringMVC后台控制层获取参数，类似一种是request.getParameter(“name”)，它有三个常用参数：defaultValue = “0”, required = false, value = “isApp”；defaultValue 表示设置默认值，required 铜过boolean设置是否是必须要传入的参数，value 值表示接受的传入的参数类型。</p>
-<h4 id="（7）、-ResponseBody"><a href="#（7）、-ResponseBody" class="headerlink" title="（7）、@ResponseBody"></a>（7）、@ResponseBody</h4><p>作用： 该注解用于将Controller的方法返回的对象，通过适当的HttpMessageConverter转换为指定格式后，写入到Response对象的body数据区。</p>
-<p>使用时机：返回的数据不是html标签的页面，而是其他某种格式的数据时（如json、xml等）使用；</p>
-<h4 id="（8）、-Component"><a href="#（8）、-Component" class="headerlink" title="（8）、@Component"></a>（8）、<strong>@Component</strong></h4><p>相当于通用的注解，当不知道一些类归到哪个层时使用，但是不建议。</p>
-<h4 id="（9）、-Repository"><a href="#（9）、-Repository" class="headerlink" title="（9）、@Repository"></a>（9）、@Repository</h4><p>用于注解dao层，在daoImpl类上面注解。</p>
-<p>​    1：@Repository 用于对DAO实现类进行注解。<br>​    2：@Service 用于对业务层注解，但是目前该功能与 @Component 相同。<br>​    3：@Constroller用于对控制层注解，但是目前该功能与 @Component 相同。</p>
-<h4 id="（10）、-Service"><a href="#（10）、-Service" class="headerlink" title="（10）、@Service"></a>（10）、@Service</h4><p>首先，在applicationContext.xml文件中加一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-package=&quot;com.hzhi.clas&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<p>加上这一行以后，将自动扫描路径下面的包，如果一个类带了@Service注解，将自动注册到Spring容器，不需要再在applicationContext.xml文件定义bean了，类似的还包括@Component、@Repository、@Controller。</p>
-<p>比如下面这个类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Service(&quot;courseDAO&quot;)</span><br><span class="line">@Scope(&quot;prototype&quot;)</span><br><span class="line">public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO&#123;</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line">    </span><br><span class="line">&#125;[![复制代码](http://common.cnblogs.com/images/copycode.gif)](javascript:void(0);)</span><br></pre></td></tr></table></figure>
-<p>其作用就相当于applicationContext.xml文件里面的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;courseDAO&quot;</span><br><span class="line">     class=&quot;com.hzhi.course.dao.CourseDAOImpl&quot; scope=&quot;prototype&quot;&gt;</span><br><span class="line">     ......    </span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="四、springmvc视图解析返回html页面报404错误"><a href="#四、springmvc视图解析返回html页面报404错误" class="headerlink" title="四、springmvc视图解析返回html页面报404错误"></a>四、springmvc视图解析返回html页面报404错误</h2><p>注意配置html视图解析器时，出现了404错误，仔细了解 当一次请求是需要经过两次拦截器，即html–&gt;拦截器–&gt;controller–&gt;拦截器—&gt;html，其中如果按照下面配置，第一次请求拦截器是正确的，第二次拦截就包404错误。</p>
-<p>解决方法：</p>
-<ol>
-<li><p>第一种，使用标题配置“html”视图解析器这样配置，个人推荐这种配置。注意这种配置html是没有前缀属性的，所以需要先配置freemarkerConfig，前缀保存在freemarkerConfig中。</p>
-</li>
-<li><p>第二种，在web.xml中加入下面代码，表示对静态资源.html不拦截。</p>
-<p><servlet-mapping>   </servlet-mapping></p>
-<pre><code>&lt;servlet-name&gt;default&lt;/servlet-name&gt;  
-&lt;url-pattern&gt;*.html&lt;/url-pattern&gt;  
-</code></pre><p> </p>
-</li>
-<li><p>第三种，使用</p>
-<p>&lt;mvc:resources location=”/“ mapping=”/*<em>/</em>.html”/&gt;</p>
-</li>
-</ol>
-<h2 id="五、ssm前后端分离"><a href="#五、ssm前后端分离" class="headerlink" title="五、ssm前后端分离"></a>五、ssm前后端分离</h2><p>注意：要导入json相应的包！</p>
-<p>控制器前面用@RestController就不用在方法上面加@responsebody。</p>
-<p>控制器前面用@Controller，就要在方法前面加上@responsebody</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//返回json数据(测试)</span><br><span class="line">	@RequestMapping(&quot;/selectEmployee.do&quot;)</span><br><span class="line">	public List&lt;Employee&gt; selectEmployee(Employee employee)&#123;</span><br><span class="line">//		List&lt;Employee&gt; employees = new ArrayList&lt;Employee&gt;();</span><br><span class="line">//		for (int i = 0; i &lt; 3; i++) &#123;</span><br><span class="line">//			Employee employee = new Employee();</span><br><span class="line">//			employee.setId(5+i);</span><br><span class="line">//			employee.setName(&quot;张&quot;+i);;</span><br><span class="line">//			employees.add(employee);</span><br><span class="line">//		&#125;</span><br><span class="line">//		return employees;</span><br><span class="line">		</span><br><span class="line">		List&lt;Employee&gt; employeesList = employeeService.getEmployees(employee);</span><br><span class="line">		return employeesList;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>访问的时候：地址/项目名/selectEmployee.do（<a href="http://localhost:8080/jxc/selectEmployee.do）" target="_blank" rel="noopener">http://localhost:8080/jxc/selectEmployee.do）</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/26/hexo博客笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo 博客笔记
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/04/26/vue笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue 笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -351,9 +218,9 @@ public void setUserDao(UserDao userDao) { // 用于属性的setter方法上
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
